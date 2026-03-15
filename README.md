@@ -136,3 +136,29 @@ SUM(consumo_agua[volume_faturado_m3]) *
 [Tarifa Média]
 
 ```
+
+
+# Principais Insights
+Perdas de água
+
+Foi possível identificar diferenças relevantes entre as cidades no percentual de perda, indicando possíveis problemas de infraestrutura ou medição.
+
+# Relação entre rompimentos e reclamações
+
+A análise mostrou uma correlação positiva entre rompimentos de rede e número de reclamações, sugerindo que falhas operacionais impactam diretamente a percepção do serviço pelos clientes.
+
+# Indicadores normalizados por população
+
+O indicador de reclamações por 100 mil habitantes permite comparação justa entre cidades com populações diferentes.
+
+## Autor
+
+**Gilnei Alves de Freitas**  
+Analista de Dados Sênior  
+🔗[LinkedIn](https://www.linkedin.com/in/gilnei-freitas/) | [Email](mailto:gilnei147@gmail.com)
+
+---
+
+## Licença
+
+Este projeto é de uso demonstrativo para fins de portfólio e aprendizado. Os dados utilizados foram fictícios ou anonimizados.
