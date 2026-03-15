@@ -1,5 +1,5 @@
 # Case de Power BI — Saneamento e Eficiência Operacional
--Contexto do negócio
+- Contexto do negócio
 
 Você foi contratado como Analista de Dados Sênior para apoiar a área de operações de uma concessionária de saneamento.
 
