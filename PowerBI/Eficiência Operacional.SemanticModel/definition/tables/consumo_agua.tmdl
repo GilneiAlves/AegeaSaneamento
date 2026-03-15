@@ -1,0 +1,64 @@
+table consumo_agua
+	lineageTag: ae2b31dd-2149-4c6a-9878-8144f67fbcb8
+
+	column id_consumo
+		dataType: int64
+		formatString: 0
+		lineageTag: a0dd6ebd-1807-48e7-937c-c74836297ee3
+		summarizeBy: sum
+		sourceColumn: id_consumo
+
+		annotation SummarizationSetBy = Automatic
+
+	column id_cidade
+		dataType: int64
+		formatString: 0
+		lineageTag: 565878db-b2eb-4973-b123-dc70ccb81c34
+		summarizeBy: none
+		sourceColumn: id_cidade
+
+		annotation SummarizationSetBy = Automatic
+
+	column data
+		dataType: dateTime
+		formatString: Short Date
+		lineageTag: ebd4215a-bd7c-4220-9301-9d8f8fa98515
+		summarizeBy: none
+		sourceColumn: data
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column volume_distribuido_m3
+		dataType: int64
+		formatString: 0
+		lineageTag: 477f42a8-39a5-4ddb-ac54-3bf1c58174e2
+		summarizeBy: sum
+		sourceColumn: volume_distribuido_m3
+
+		annotation SummarizationSetBy = Automatic
+
+	column volume_faturado_m3
+		dataType: int64
+		formatString: 0
+		lineageTag: c4665880-b9ee-4743-a653-2da2efe6bae6
+		summarizeBy: sum
+		sourceColumn: volume_faturado_m3
+
+		annotation SummarizationSetBy = Automatic
+
+	partition consumo_agua = m
+		mode: import
+		source =
+				let
+				    Fonte = Csv.Document(File.Contents("C:\GitHub\AegeaSaneamento\data\consumo_agua.csv"),[Delimiter=";", Columns=5, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"id_consumo", Int64.Type}, {"id_cidade", Int64.Type}, {"data", type date}, {"volume_distribuido_m3", Int64.Type}, {"volume_faturado_m3", Int64.Type}})
+				in
+				    #"Tipo Alterado"
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

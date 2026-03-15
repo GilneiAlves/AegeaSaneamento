@@ -10,5 +10,16 @@ annotation __PBI_TimeIntelligenceEnabled = 1
 
 annotation PBI_ProTooling = ["DevMode"]
 
+annotation PBI_QueryOrder = ["cidades","clientes","consumo_agua","indicadores_operacionais"]
+
+ref table cidades
+ref table consumo_agua
+ref table indicadores_operacionais
+ref table clientes
+ref table dCalendario
+ref table Metricas
+ref table DateTableTemplate_7e5f7c80-e394-42c8-818b-2c811caa1449
+ref table LocalDateTable_9be83419-9450-4f19-a15c-47aa2018a3bd
+
 ref cultureInfo pt-BR
 

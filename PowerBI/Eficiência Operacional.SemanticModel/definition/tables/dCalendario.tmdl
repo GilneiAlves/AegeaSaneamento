@@ -1,0 +1,58 @@
+table dCalendario
+	lineageTag: 00905da2-e868-4412-83c6-892754dffe9f
+
+	column Data
+		formatString: Short Date
+		lineageTag: 71156b36-545a-4ec9-9f3b-6286d3b5fb22
+		summarizeBy: none
+		sourceColumn: [Date]
+
+		variation Variation
+			isDefault
+			relationship: 678cc05b-a557-4411-9837-f85b4353912c
+			defaultHierarchy: LocalDateTable_9be83419-9450-4f19-a15c-47aa2018a3bd.'Hierarquia de datas'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Ano = YEAR(dCalendario[Data])
+		formatString: 0
+		lineageTag: ab95b1e8-978e-4f37-9ad0-ad9087e4ab51
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column Dia = DAY(dCalendario[Data])
+		formatString: 0
+		lineageTag: 50fb4c32-01b0-4d9d-bd48-7376b9b83ff4
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column Mês = dCalendario[Data].[Mês]
+		lineageTag: 601170b9-9d9a-471d-ac8c-af287fe9de7a
+		summarizeBy: none
+		sortByColumn: MêsNum
+
+		annotation SummarizationSetBy = Automatic
+
+	column MêsNum = MONTH(dCalendario[Data])
+		formatString: 0
+		lineageTag: cdb4cd01-2300-42d2-b315-4777a41200e0
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column Trimestre = dCalendario[Data].[Trimestre]
+		lineageTag: 518b86f5-6c29-4e5c-a8b9-27484f6d1e7e
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	partition dCalendario = calculated
+		mode: import
+		source = CALENDARAUTO()
+
+	annotation PBI_Id = 289bfb7ff23d4e149f9746c1dfafdb09
+

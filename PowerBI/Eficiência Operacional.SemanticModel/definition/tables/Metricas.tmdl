@@ -1,0 +1,76 @@
+table Metricas
+	lineageTag: 727e607e-ab55-4ffb-8eac-38f88a6bd4f6
+
+	measure 'Reclamacoes 100k' = ```
+			
+			DIVIDE(
+			    SUM(indicadores_operacionais[reclamacoes]),
+			    MAX(cidades[populacao])
+			) * 100000
+			
+			```
+		lineageTag: 1a4ab009-6479-4a6b-af2b-2a169542f1f5
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Perda de água' =
+			
+			SUMX(
+			    consumo_agua,
+			    consumo_agua[volume_distribuido_m3] - consumo_agua[volume_faturado_m3]
+			    )
+		formatString: #,0
+		lineageTag: 2dd0ca9c-3d6f-4774-8d65-036aaa262a62
+
+	measure Reclamações = SUM(indicadores_operacionais[reclamacoes])
+		formatString: 0
+		lineageTag: cd103198-fd4e-4513-a840-0a7711c38719
+
+	measure rompimentos_rede = SUM(indicadores_operacionais[rompimentos_rede])
+		formatString: 0
+		lineageTag: f4cec92c-eb67-4654-8785-170f23aadc56
+
+	measure Faturamento =
+			
+			SUMX(
+			    consumo_agua,
+			    consumo_agua[volume_faturado_m3] * SUM(clientes[tarifa_m3])
+			)
+		formatString: #,0
+		lineageTag: f14925fd-6112-4a32-9cf2-6b6edb8ffa4d
+
+	measure 'Tarifa Média' = ```
+			
+			AVERAGE(clientes[tarifa_m3])
+			
+			```
+		lineageTag: 77a7e843-74a6-432a-9467-0da52a7af061
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Faturamento Estimado' = ```
+			
+			SUM(consumo_agua[volume_faturado_m3]) *
+			[Tarifa Média]
+			
+			```
+		lineageTag: bc7585da-8d5b-4944-a887-453478112001
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column linha
+		isHidden
+		formatString: 0
+		lineageTag: 92edab8e-fff7-4819-9f90-162d00c691e0
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [linha]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Metricas = calculated
+		mode: import
+		source = ROW("linha",1)
+
+	annotation PBI_Id = dc600134f7aa44b68b561219e80b2d5d
+

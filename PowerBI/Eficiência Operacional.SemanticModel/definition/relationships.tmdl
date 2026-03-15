@@ -1,0 +1,25 @@
+relationship AutoDetected_5ce879a6-2c56-4ae8-90bc-f28b61be9f03
+	fromColumn: consumo_agua.id_cidade
+	toColumn: cidades.id_cidade
+
+relationship AutoDetected_12ad51c9-3ec3-4235-8365-637b4a14649a
+	fromColumn: indicadores_operacionais.id_cidade
+	toColumn: cidades.id_cidade
+
+relationship AutoDetected_1ee88df6-53fb-4394-a639-2d4139c6f438
+	fromColumn: clientes.id_cidade
+	toColumn: cidades.id_cidade
+
+relationship 628a5e08-cfba-7080-1a0e-aa65a8336ea1
+	fromColumn: consumo_agua.data
+	toColumn: dCalendario.Data
+
+relationship 7e112a7a-650b-d308-a8d8-cd68f9526997
+	fromColumn: indicadores_operacionais.data
+	toColumn: dCalendario.Data
+
+relationship 678cc05b-a557-4411-9837-f85b4353912c
+	joinOnDateBehavior: datePartOnly
+	fromColumn: dCalendario.Data
+	toColumn: LocalDateTable_9be83419-9450-4f19-a15c-47aa2018a3bd.Date
+

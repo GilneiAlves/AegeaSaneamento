@@ -1,0 +1,64 @@
+table indicadores_operacionais
+	lineageTag: cdac312c-ae58-4735-ab93-f58397b78f72
+
+	column id_cidade
+		dataType: int64
+		formatString: 0
+		lineageTag: 0aa5868c-50c2-4b28-bdc7-9c055affe40c
+		summarizeBy: none
+		sourceColumn: id_cidade
+
+		annotation SummarizationSetBy = Automatic
+
+	column data
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 6a0919e1-476a-4e4d-a891-34f2788e73ef
+		summarizeBy: none
+		sourceColumn: data
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column reclamacoes
+		dataType: int64
+		formatString: 0
+		lineageTag: 209fd740-7cb9-4951-bb0f-d6199ed8a214
+		summarizeBy: sum
+		sourceColumn: reclamacoes
+
+		annotation SummarizationSetBy = Automatic
+
+	column rompimentos_rede
+		dataType: int64
+		formatString: 0
+		lineageTag: 0a37cde4-27ae-4c4f-937c-338c078e6458
+		summarizeBy: sum
+		sourceColumn: rompimentos_rede
+
+		annotation SummarizationSetBy = Automatic
+
+	column tempo_medio_reparo_h
+		dataType: int64
+		formatString: 0
+		lineageTag: ebb9db25-479d-4018-b4be-7490e9975ee3
+		summarizeBy: sum
+		sourceColumn: tempo_medio_reparo_h
+
+		annotation SummarizationSetBy = Automatic
+
+	partition indicadores_operacionais = m
+		mode: import
+		source =
+				let
+				    Fonte = Csv.Document(File.Contents("C:\GitHub\AegeaSaneamento\data\indicadores_operacionais.csv"),[Delimiter=";", Columns=5, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"id_cidade", Int64.Type}, {"data", type date}, {"reclamacoes", Int64.Type}, {"rompimentos_rede", Int64.Type}, {"tempo_medio_reparo_h", Int64.Type}})
+				in
+				    #"Tipo Alterado"
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

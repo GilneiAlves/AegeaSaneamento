@@ -1,0 +1,52 @@
+table clientes
+	lineageTag: e9bdea23-3fe4-4408-a3d3-02a18ed4bd15
+
+	column id_cliente
+		dataType: int64
+		formatString: 0
+		lineageTag: 34dc82c9-4393-4858-b7bf-0133a5db10fd
+		summarizeBy: sum
+		sourceColumn: id_cliente
+
+		annotation SummarizationSetBy = Automatic
+
+	column id_cidade
+		dataType: int64
+		formatString: 0
+		lineageTag: 477ee8ce-f585-4faf-b4b4-2b7739161387
+		summarizeBy: none
+		sourceColumn: id_cidade
+
+		annotation SummarizationSetBy = Automatic
+
+	column tipo_cliente
+		dataType: string
+		lineageTag: d717b74c-1815-4bc7-8733-cf8406b68f07
+		summarizeBy: none
+		sourceColumn: tipo_cliente
+
+		annotation SummarizationSetBy = Automatic
+
+	column tarifa_m3
+		dataType: int64
+		formatString: 0
+		lineageTag: 37c745da-0eca-4957-9e53-e7b0d4f04149
+		summarizeBy: sum
+		sourceColumn: tarifa_m3
+
+		annotation SummarizationSetBy = Automatic
+
+	partition clientes = m
+		mode: import
+		source =
+				let
+				    Fonte = Csv.Document(File.Contents("C:\GitHub\AegeaSaneamento\data\clientes.csv"),[Delimiter=";", Columns=4, Encoding=1252, QuoteStyle=QuoteStyle.None]),
+				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"id_cliente", Int64.Type}, {"id_cidade", Int64.Type}, {"tipo_cliente", type text}, {"tarifa_m3", Int64.Type}})
+				in
+				    #"Tipo Alterado"
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

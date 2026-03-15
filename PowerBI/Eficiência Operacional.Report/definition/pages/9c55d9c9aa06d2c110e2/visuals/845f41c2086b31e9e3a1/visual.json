@@ -1,0 +1,157 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
+  "name": "845f41c2086b31e9e3a1",
+  "position": {
+    "x": 574.02985074626861,
+    "y": 388.65671641791045,
+    "z": 4,
+    "height": 331.34328358208955,
+    "width": 678.80597014925377,
+    "tabOrder": 3
+  },
+  "visual": {
+    "visualType": "scatterChart",
+    "query": {
+      "queryState": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "cidades"
+                    }
+                  },
+                  "Property": "cidade"
+                }
+              },
+              "queryRef": "cidades.cidade",
+              "nativeQueryRef": "cidade",
+              "active": true
+            }
+          ]
+        },
+        "X": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Metricas"
+                    }
+                  },
+                  "Property": "rompimentos_rede"
+                }
+              },
+              "queryRef": "cidades.rompimentos_rede",
+              "nativeQueryRef": "rompimentos_rede",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Metricas"
+                    }
+                  },
+                  "Property": "Reclamações"
+                }
+              },
+              "queryRef": "cidades.Reclamações",
+              "nativeQueryRef": "Reclamações"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "categoryLabels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "trend": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "displayName": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Linha de tendência 1'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "a132a2a0e74aa3d6232a",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Metricas"
+              }
+            },
+            "Property": "rompimentos_rede"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "8684840019226b281729",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Metricas"
+              }
+            },
+            "Property": "Reclamações"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "78fbd50c0024305c0c1b",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "cidades"
+              }
+            },
+            "Property": "cidade"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
+  }
+}

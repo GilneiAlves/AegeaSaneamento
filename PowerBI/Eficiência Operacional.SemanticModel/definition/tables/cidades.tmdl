@@ -1,0 +1,51 @@
+table cidades
+	lineageTag: 69ff3c33-ac55-4e22-b463-af2a86d2491c
+
+	column id_cidade
+		dataType: int64
+		formatString: 0
+		lineageTag: b3cea4e8-de66-491a-8f56-4f5d9b774e65
+		summarizeBy: none
+		sourceColumn: id_cidade
+
+		annotation SummarizationSetBy = Automatic
+
+	column cidade
+		dataType: string
+		lineageTag: dc3ebd56-2258-498b-8219-5b2d950f945a
+		summarizeBy: none
+		sourceColumn: cidade
+
+		annotation SummarizationSetBy = Automatic
+
+	column estado
+		dataType: string
+		lineageTag: 51513325-0ff7-47ea-94ae-930d0b6cc37f
+		summarizeBy: none
+		sourceColumn: estado
+
+		annotation SummarizationSetBy = Automatic
+
+	column populacao
+		dataType: int64
+		formatString: 0
+		lineageTag: 25b34bf1-1594-43f8-b7b2-714cd91d66e3
+		summarizeBy: sum
+		sourceColumn: populacao
+
+		annotation SummarizationSetBy = Automatic
+
+	partition cidades = m
+		mode: import
+		source =
+				let
+				    Fonte = Csv.Document(File.Contents("C:\GitHub\AegeaSaneamento\data\cidades.csv"),[Delimiter=";", Columns=4, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Cabeçalhos Promovidos" = Table.PromoteHeaders(Fonte, [PromoteAllScalars=true]),
+				    #"Tipo Alterado" = Table.TransformColumnTypes(#"Cabeçalhos Promovidos",{{"id_cidade", Int64.Type}, {"cidade", type text}, {"estado", type text}, {"populacao", Int64.Type}})
+				in
+				    #"Tipo Alterado"
+
+	annotation PBI_NavigationStepName = Navegação
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,99 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 57.150323085752007,
+        "y": 0
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 411.01541492165944,
+            "y": 81.284349096751839
+          },
+          "nodeIndex": "cidades",
+          "nodeLineageTag": "69ff3c33-ac55-4e22-b463-af2a86d2491c",
+          "size": {
+            "height": 176,
+            "width": 234
+          },
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 434.171037823526,
+            "y": 392.90564426826762
+          },
+          "nodeIndex": "clientes",
+          "nodeLineageTag": "e9bdea23-3fe4-4408-a3d3-02a18ed4bd15",
+          "size": {
+            "height": 289,
+            "width": 234
+          },
+          "zIndex": 4
+        },
+        {
+          "location": {
+            "x": 50,
+            "y": 141.79086556368793
+          },
+          "nodeIndex": "consumo_agua",
+          "nodeLineageTag": "ae2b31dd-2149-4c6a-9878-8144f67fbcb8",
+          "size": {
+            "height": 345,
+            "width": 234
+          },
+          "zIndex": 5
+        },
+        {
+          "location": {
+            "x": 906.15032308575212,
+            "y": 49.5
+          },
+          "nodeIndex": "indicadores_operacionais",
+          "nodeLineageTag": "cdac312c-ae58-4735-ab93-f58397b78f72",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 801.17103782352592,
+            "y": 310.20282213413384
+          },
+          "nodeIndex": "dCalendario",
+          "nodeLineageTag": "00905da2-e868-4412-83c6-892754dffe9f",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 3
+        },
+        {
+          "location": {
+            "x": 1140.150323085752,
+            "y": 232.70282213413384
+          },
+          "nodeIndex": "Metricas",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 0
+        }
+      ],
+      "name": "Todas as tabelas",
+      "zoomValue": 100,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "Todas as tabelas",
+  "defaultDiagram": "Todas as tabelas"
+}
