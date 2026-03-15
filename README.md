@@ -104,3 +104,35 @@ Perda de Água =
 SUM(consumo_agua[volume_distribuido_m3]) -
 SUM(consumo_agua[volume_faturado_m3])```
 
+```
+Percentual de Perda
+```
+Perc Perda =
+DIVIDE(
+    [Perda de Água],
+    SUM(consumo_agua[volume_distribuido_m3])
+)
+```
+
+Reclamações por 100 mil habitantes
+```
+Reclamacoes 100k =
+DIVIDE(
+    SUM(indicadores_operacionais[reclamacoes]),
+    MAX(cidades[populacao])
+) * 100000
+
+```
+Tarifa Média
+```
+Tarifa Média =
+AVERAGE(clientes[tarifa_m3])
+
+```
+Faturamento Estimado
+```
+Faturamento Estimado =
+SUM(consumo_agua[volume_faturado_m3]) *
+[Tarifa Média]
+
+```
