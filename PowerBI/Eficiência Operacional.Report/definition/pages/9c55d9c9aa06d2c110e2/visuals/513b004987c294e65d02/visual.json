@@ -1,19 +1,19 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
-  "name": "474adbeb1d2d094c9237",
+  "name": "513b004987c294e65d02",
   "position": {
-    "x": 780.90756302521,
-    "y": 191.46218487394958,
-    "z": 0,
-    "height": 254.92436974789916,
-    "width": 479.73109243697479,
-    "tabOrder": 0
+    "x": 8.6050420168067223,
+    "y": 182.42689075630256,
+    "z": 10,
+    "height": 72.0672268907563,
+    "width": 166.72268907563026,
+    "tabOrder": 8
   },
   "visual": {
-    "visualType": "clusteredBarChart",
+    "visualType": "slicer",
     "query": {
       "queryState": {
-        "Category": {
+        "Values": {
           "projections": [
             {
               "field": {
@@ -23,114 +23,26 @@
                       "Entity": "cidades"
                     }
                   },
-                  "Property": "cidade"
+                  "Property": "estado"
                 }
               },
-              "queryRef": "cidades.cidade",
-              "nativeQueryRef": "cidade",
-              "active": true
-            }
-          ]
-        },
-        "Y": {
-          "projections": [
-            {
-              "field": {
-                "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Metricas"
-                    }
-                  },
-                  "Property": "Perda de água"
-                }
-              },
-              "queryRef": "cidades.Perda de água",
-              "nativeQueryRef": "Perda de água"
+              "queryRef": "cidades.estado",
+              "nativeQueryRef": "Estado",
+              "active": true,
+              "displayName": "Estado"
             }
           ]
         }
-      },
-      "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "Measure": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Metricas"
-                  }
-                },
-                "Property": "Perda de água"
-              }
-            },
-            "direction": "Descending"
-          }
-        ]
       }
     },
     "objects": {
-      "categoryAxis": [
+      "data": [
         {
           "properties": {
-            "show": {
+            "mode": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "switchAxisPosition": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "maxMarginFactor": {
-              "expr": {
-                "Literal": {
-                  "Value": "41L"
-                }
-              }
-            },
-            "showAxisTitle": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "valueAxis": [
-        {
-          "properties": {
-            "showAxisTitle": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "labels": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "labelPosition": {
-              "expr": {
-                "Literal": {
-                  "Value": "'InsideEnd'"
+                  "Value": "'Dropdown'"
                 }
               }
             }
@@ -145,7 +57,7 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             },
@@ -302,37 +214,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "e1e4ca6318e43d6d080a",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "cidades"
-              }
-            },
-            "Property": "cidade"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "4d301e02c843e35c0264",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Metricas"
-              }
-            },
-            "Property": "Perda de água"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

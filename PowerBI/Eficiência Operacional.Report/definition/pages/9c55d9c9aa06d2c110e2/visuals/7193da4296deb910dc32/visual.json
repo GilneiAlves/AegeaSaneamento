@@ -1,39 +1,33 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
-  "name": "474adbeb1d2d094c9237",
+  "name": "7193da4296deb910dc32",
   "position": {
-    "x": 780.90756302521,
-    "y": 191.46218487394958,
-    "z": 0,
-    "height": 254.92436974789916,
-    "width": 479.73109243697479,
-    "tabOrder": 0
+    "x": 191.46218487394958,
+    "y": 69.915966386554615,
+    "z": 6,
+    "height": 111.8655462184874,
+    "width": 1069.1764705882354
   },
   "visual": {
-    "visualType": "clusteredBarChart",
+    "visualType": "cardVisual",
     "query": {
       "queryState": {
-        "Category": {
+        "Data": {
           "projections": [
             {
               "field": {
-                "Column": {
+                "Measure": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "cidades"
+                      "Entity": "Metricas"
                     }
                   },
-                  "Property": "cidade"
+                  "Property": "Faturamento"
                 }
               },
-              "queryRef": "cidades.cidade",
-              "nativeQueryRef": "cidade",
-              "active": true
-            }
-          ]
-        },
-        "Y": {
-          "projections": [
+              "queryRef": "Metricas.Faturamento",
+              "nativeQueryRef": "Faturamento"
+            },
             {
               "field": {
                 "Measure": {
@@ -45,8 +39,50 @@
                   "Property": "Perda de água"
                 }
               },
-              "queryRef": "cidades.Perda de água",
+              "queryRef": "Metricas.Perda de água",
               "nativeQueryRef": "Perda de água"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Metricas"
+                    }
+                  },
+                  "Property": "Reclamações"
+                }
+              },
+              "queryRef": "Metricas.Reclamações",
+              "nativeQueryRef": "Reclamações"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Metricas"
+                    }
+                  },
+                  "Property": "rompimentos_rede"
+                }
+              },
+              "queryRef": "Metricas.rompimentos_rede",
+              "nativeQueryRef": "rompimentos_rede"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Metricas"
+                    }
+                  },
+                  "Property": "Tarifa Média"
+                }
+              },
+              "queryRef": "Metricas.Tarifa Média",
+              "nativeQueryRef": "Tarifa Média"
             }
           ]
         }
@@ -61,7 +97,7 @@
                     "Entity": "Metricas"
                   }
                 },
-                "Property": "Perda de água"
+                "Property": "Faturamento"
               }
             },
             "direction": "Descending"
@@ -70,7 +106,7 @@
       }
     },
     "objects": {
-      "categoryAxis": [
+      "value": [
         {
           "properties": {
             "show": {
@@ -79,58 +115,68 @@
                   "Value": "true"
                 }
               }
-            },
-            "switchAxisPosition": {
+            }
+          }
+        },
+        {
+          "properties": {
+            "textWrap": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "maxMarginFactor": {
-              "expr": {
-                "Literal": {
-                  "Value": "41L"
-                }
-              }
-            },
-            "showAxisTitle": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             }
+          },
+          "selector": {
+            "id": "default"
           }
         }
       ],
-      "valueAxis": [
+      "label": [
         {
           "properties": {
-            "showAxisTitle": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "labels": [
-        {
-          "properties": {
-            "show": {
+            "matchValueAlignment": {
               "expr": {
                 "Literal": {
                   "Value": "true"
                 }
               }
             },
-            "labelPosition": {
+            "position": {
               "expr": {
                 "Literal": {
-                  "Value": "'InsideEnd'"
+                  "Value": "'aboveValue'"
+                }
+              }
+            },
+            "heading": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Normal'"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        }
+      ],
+      "layout": [
+        {
+          "properties": {
+            "autoGrid": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }
@@ -139,7 +185,7 @@
       ]
     },
     "visualContainerObjects": {
-      "title": [
+      "dropShadow": [
         {
           "properties": {
             "show": {
@@ -149,29 +195,20 @@
                 }
               }
             },
-            "titleWrap": {
+            "position": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "'Outer'"
+                }
+              }
+            },
+            "preset": {
+              "expr": {
+                "Literal": {
+                  "Value": "'CenterRight'"
                 }
               }
             }
-          }
-        }
-      ],
-      "spacing": [
-        {
-          "properties": {
-            "verticalSpacing": {
-              "expr": {
-                "Literal": {
-                  "Value": "2D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "id": "default"
           }
         }
       ],
@@ -184,11 +221,36 @@
                   "Value": "false"
                 }
               }
-            },
-            "transparency": {
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
               "expr": {
                 "Literal": {
-                  "Value": "0D"
+                  "Value": "true"
+                }
+              }
+            },
+            "radius": {
+              "expr": {
+                "Literal": {
+                  "Value": "10D"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": -0.2
+                    }
+                  }
                 }
               }
             }
@@ -221,73 +283,20 @@
           }
         }
       ],
-      "border": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "color": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": -0.2
-                    }
-                  }
-                }
-              }
-            },
-            "radius": {
-              "expr": {
-                "Literal": {
-                  "Value": "10D"
-                }
-              }
-            },
-            "width": {
-              "expr": {
-                "Literal": {
-                  "Value": "1D"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "dropShadow": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "preset": {
-              "expr": {
-                "Literal": {
-                  "Value": "'CenterRight'"
-                }
-              }
-            },
-            "position": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Outer'"
-                }
-              }
-            }
-          }
-        }
-      ],
       "visualHeader": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "title": [
         {
           "properties": {
             "show": {
@@ -302,37 +311,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "e1e4ca6318e43d6d080a",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "cidades"
-              }
-            },
-            "Property": "cidade"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "4d301e02c843e35c0264",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Metricas"
-              }
-            },
-            "Property": "Perda de água"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

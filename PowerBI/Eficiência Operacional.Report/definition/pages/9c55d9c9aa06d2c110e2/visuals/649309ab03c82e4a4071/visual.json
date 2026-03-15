@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.6.0/schema.json",
-  "name": "474adbeb1d2d094c9237",
+  "name": "649309ab03c82e4a4071",
   "position": {
     "x": 780.90756302521,
-    "y": 191.46218487394958,
-    "z": 0,
-    "height": 254.92436974789916,
+    "y": 456.06722689075633,
+    "z": 8,
+    "height": 258.15126050420167,
     "width": 479.73109243697479,
-    "tabOrder": 0
+    "tabOrder": 6
   },
   "visual": {
     "visualType": "clusteredBarChart",
@@ -42,11 +42,11 @@
                       "Entity": "Metricas"
                     }
                   },
-                  "Property": "Perda de água"
+                  "Property": "Faturamento Estimado"
                 }
               },
-              "queryRef": "cidades.Perda de água",
-              "nativeQueryRef": "Perda de água"
+              "queryRef": "Metricas.Faturamento Estimado",
+              "nativeQueryRef": "Faturamento Estimado"
             }
           ]
         }
@@ -61,12 +61,13 @@
                     "Entity": "Metricas"
                   }
                 },
-                "Property": "Perda de água"
+                "Property": "Faturamento Estimado"
               }
             },
             "direction": "Descending"
           }
-        ]
+        ],
+        "isDefaultSort": true
       }
     },
     "objects": {
@@ -302,37 +303,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "e1e4ca6318e43d6d080a",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "cidades"
-              }
-            },
-            "Property": "cidade"
-          }
-        },
-        "type": "Categorical"
-      },
-      {
-        "name": "4d301e02c843e35c0264",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Metricas"
-              }
-            },
-            "Property": "Perda de água"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }
