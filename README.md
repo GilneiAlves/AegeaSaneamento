@@ -1,34 +1,106 @@
-# Case de Power BI — Saneamento e Eficiência Operacional
-- Contexto do negócio
+# Case Power BI — Análise Operacional de Saneamento
 
-Você foi contratado como Analista de Dados Sênior para apoiar a área de operações de uma concessionária de saneamento.
+## Objetivo
 
-A empresa opera serviços de:
+Este projeto tem como objetivo analisar dados operacionais de uma concessionária de saneamento utilizando **Power BI**, com foco em indicadores de eficiência operacional, perdas de água, reclamações de clientes e estimativa de faturamento por cidade.
 
-* abastecimento de água
-* coleta de esgoto
-* tratamento de esgoto
-* faturamento de consumo
+O dashboard foi desenvolvido para apoiar **tomada de decisão gerencial**, identificando oportunidades de melhoria na operação e na qualidade do serviço prestado.
 
-A diretoria quer um dashboard executivo em Power BI para acompanhar eficiência operacional e financeira das cidades atendidas.
-
-## Estrutura das Bases de Dados
-
-Simule 4 tabelas.
 ---
 
+# Estrutura do Projeto
 
-* 1. Qual cidade apresenta maior perda de água?
+O projeto utiliza quatro bases de dados simuladas.
+
+## Tabelas
+
+### cidades
+
+Tabela de dimensão contendo informações das cidades atendidas.
+
+| coluna | descrição |
+|------|-----------|
+id_cidade | identificador da cidade |
+cidade | nome da cidade |
+estado | estado |
+populacao | população estimada |
+
+---
+
+### clientes
+
+Tabela contendo os tipos de clientes e tarifas praticadas.
+
+| coluna | descrição |
+|------|-----------|
+id_cliente | identificador do cliente |
+id_cidade | cidade do cliente |
+tipo_cliente | residencial, comercial, industrial ou público |
+tarifa_m3 | tarifa média por metro cúbico |
+
+---
+
+### consumo_agua
+
+Tabela com os dados de distribuição e faturamento de água.
+
+| coluna | descrição |
+|------|-----------|
+id_consumo | identificador da leitura |
+id_cidade | cidade |
+data | data da medição |
+volume_distribuido_m3 | volume total distribuído |
+volume_faturado_m3 | volume faturado |
+
+---
+
+### indicadores_operacionais
+
+Tabela contendo indicadores operacionais da rede.
+
+| coluna | descrição |
+|------|-----------|
+id_cidade | cidade |
+data | período |
+reclamacoes | número de reclamações registradas |
+rompimentos_rede | número de rompimentos na rede |
+tempo_medio_reparo_h | tempo médio de reparo em horas |
+
+---
+
+# Modelagem de Dados
+
+O modelo segue o padrão **Star Schema**, onde a tabela `cidades` atua como dimensão principal.
+
+Relacionamentos:
+
+cidades (1) ──── consumo_agua (N)
+cidades (1) ──── clientes (N)
+cidades (1) ──── indicadores_operacionais (N)
 
 
-* 2. Qual a evolução mensal das perdas?
+Também foi criada uma **tabela calendário** para análise temporal.
 
+---
 
-* 3. Qual cidade possui maior número de reclamações por 100 mil habitantes?
+# Perguntas de Negócio
 
+O dashboard foi desenvolvido para responder às seguintes perguntas:
 
+1. Qual cidade apresenta maior perda de água?
+2. Qual a evolução mensal das perdas?
+3. Qual cidade possui maior número de reclamações por 100 mil habitantes?
+4. Existe relação entre rompimentos de rede e reclamações?
+5. Qual o faturamento estimado por cidade?
 
-* 4. Existe correlação entre:
+---
 
+# Métricas Utilizadas
 
-* 5. Qual o faturamento estimado por cidade?
+## Perda de Água
+
+```DAX
+Perda de Água =
+SUM(consumo_agua[volume_distribuido_m3]) -
+SUM(consumo_agua[volume_faturado_m3])```
+
