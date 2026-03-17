@@ -4,10 +4,10 @@
   "position": {
     "x": 190.92436974789916,
     "y": 191.46218487394958,
-    "z": 2,
+    "z": 1000,
     "height": 254.92436974789916,
     "width": 574.38655462184875,
-    "tabOrder": 1
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "lineChart",
@@ -278,23 +278,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "876c57f786028520a205",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Metricas"
-              }
-            },
-            "Property": "Perda de água"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

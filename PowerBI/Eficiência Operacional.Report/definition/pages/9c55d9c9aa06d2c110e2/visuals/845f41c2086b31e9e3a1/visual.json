@@ -4,10 +4,10 @@
   "position": {
     "x": 190.92436974789916,
     "y": 456.06722689075627,
-    "z": 4,
+    "z": 2000,
     "height": 258.15126050420167,
     "width": 574.38655462184875,
-    "tabOrder": 3
+    "tabOrder": 2000
   },
   "visual": {
     "visualType": "scatterChart",
@@ -310,51 +310,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "a132a2a0e74aa3d6232a",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Metricas"
-              }
-            },
-            "Property": "rompimentos_rede"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "8684840019226b281729",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Metricas"
-              }
-            },
-            "Property": "Reclamações"
-          }
-        },
-        "type": "Advanced"
-      },
-      {
-        "name": "78fbd50c0024305c0c1b",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "cidades"
-              }
-            },
-            "Property": "cidade"
-          }
-        },
-        "type": "Categorical"
-      }
-    ]
   }
 }

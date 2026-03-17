@@ -1719,881 +1719,125 @@ cultureInfo pt-BR
 			          }
 			        }
 			      ]
+			    },
+			    "metrica.faturamento_acum": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Metricas",
+			          "ConceptualProperty": "Faturamento acum"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "faturamento acum": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
-			    "cidade_is_named_cidade": {
-			      "Binding": {
-			        "ConceptualEntity": "cidades"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "cidade": {
-			          "Target": {
-			            "Entity": "cidade"
-			          }
-			        },
-			        "cidade.cidade": {
-			          "Target": {
-			            "Entity": "cidade.cidade"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Name": {
-			            "Subject": {
-			              "Role": "cidade"
-			            },
-			            "Name": {
-			              "Role": "cidade.cidade"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "cidades_are_names_IDs_of_cidades"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "cidade"
-			            },
-			            "Object": {
-			              "Role": "cidade.cidade"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "cidades_have_cidades"
-			        }
-			      ]
-			    },
-			    "cidade_has_id_cidade": {
-			      "Binding": {
-			        "ConceptualEntity": "cidades"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "cidade": {
-			          "Target": {
-			            "Entity": "cidade"
-			          }
-			        },
-			        "cidade.id_cidade": {
-			          "Target": {
-			            "Entity": "cidade.id_cidade"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "cidade"
-			            },
-			            "Object": {
-			              "Role": "cidade.id_cidade"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "cidades_have_id_cidades"
-			        }
-			      ]
-			    },
-			    "cidade_has_estado": {
-			      "Binding": {
-			        "ConceptualEntity": "cidades"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "cidade": {
-			          "Target": {
-			            "Entity": "cidade"
-			          }
-			        },
-			        "cidade.estado": {
-			          "Target": {
-			            "Entity": "cidade.estado"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "cidade"
-			            },
-			            "Object": {
-			              "Role": "cidade.estado"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "cidades_have_estado"
-			        }
-			      ]
-			    },
-			    "cidade_has_populacao": {
-			      "Binding": {
-			        "ConceptualEntity": "cidades"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "cidade": {
-			          "Target": {
-			            "Entity": "cidade"
-			          }
-			        },
-			        "cidade.populacao": {
-			          "Target": {
-			            "Entity": "cidade.populacao"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "cidade"
-			            },
-			            "Object": {
-			              "Role": "cidade.populacao"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "cidades_have_populacaos"
-			        }
-			      ]
-			    },
-			    "consumo_agua_has_id_consumo": {
-			      "Binding": {
-			        "ConceptualEntity": "consumo_agua"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "consumo_agua": {
-			          "Target": {
-			            "Entity": "consumo_agua"
-			          }
-			        },
-			        "consumo_agua.id_consumo": {
-			          "Target": {
-			            "Entity": "consumo_agua.id_consumo"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "consumo_agua"
-			            },
-			            "Object": {
-			              "Role": "consumo_agua.id_consumo"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "consumo_agua_have_id_consumos"
-			        }
-			      ]
-			    },
-			    "consumo_agua_has_data": {
-			      "Binding": {
-			        "ConceptualEntity": "consumo_agua"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "consumo_agua": {
-			          "Target": {
-			            "Entity": "consumo_agua"
-			          }
-			        },
-			        "consumo_agua.data": {
-			          "Target": {
-			            "Entity": "consumo_agua.data"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "consumo_agua"
-			            },
-			            "Object": {
-			              "Role": "consumo_agua.data"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "consumo_agua_have_data"
-			        }
-			      ]
-			    },
-			    "consumo_agua_has_volume_distribuido_m_3": {
-			      "Binding": {
-			        "ConceptualEntity": "consumo_agua"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "consumo_agua": {
-			          "Target": {
-			            "Entity": "consumo_agua"
-			          }
-			        },
-			        "consumo_agua.volume_distribuido_m_3": {
-			          "Target": {
-			            "Entity": "consumo_agua.volume_distribuido_m_3"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "consumo_agua"
-			            },
-			            "Object": {
-			              "Role": "consumo_agua.volume_distribuido_m_3"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "consumo_agua_have_volume_distribuido_m_3"
-			        }
-			      ]
-			    },
-			    "consumo_agua_has_volume_faturado_m_3": {
-			      "Binding": {
-			        "ConceptualEntity": "consumo_agua"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "consumo_agua": {
-			          "Target": {
-			            "Entity": "consumo_agua"
-			          }
-			        },
-			        "consumo_agua.volume_faturado_m_3": {
-			          "Target": {
-			            "Entity": "consumo_agua.volume_faturado_m_3"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "consumo_agua"
-			            },
-			            "Object": {
-			              "Role": "consumo_agua.volume_faturado_m_3"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "consumo_agua_have_volume_faturado_m_3"
-			        }
-			      ]
-			    },
-			    "indicadores_operacionais_has_data": {
-			      "Binding": {
-			        "ConceptualEntity": "indicadores_operacionais"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "indicadores_operacionais": {
-			          "Target": {
-			            "Entity": "indicadores_operacionais"
-			          }
-			        },
-			        "indicadores_operacionais.data": {
-			          "Target": {
-			            "Entity": "indicadores_operacionais.data"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "indicadores_operacionais"
-			            },
-			            "Object": {
-			              "Role": "indicadores_operacionais.data"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "indicadores_operacionaises_have_data"
-			        }
-			      ]
-			    },
-			    "indicadores_operacionais_has_reclamacoe": {
-			      "Binding": {
-			        "ConceptualEntity": "indicadores_operacionais"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "indicadores_operacionais": {
-			          "Target": {
-			            "Entity": "indicadores_operacionais"
-			          }
-			        },
-			        "indicadores_operacionais.reclamacoe": {
-			          "Target": {
-			            "Entity": "indicadores_operacionais.reclamacoe"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "indicadores_operacionais"
-			            },
-			            "Object": {
-			              "Role": "indicadores_operacionais.reclamacoe"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "indicadores_operacionaises_have_reclamacoes"
-			        }
-			      ]
-			    },
-			    "indicadores_operacionais_has_rompimentos_rede": {
-			      "Binding": {
-			        "ConceptualEntity": "indicadores_operacionais"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "indicadores_operacionais": {
-			          "Target": {
-			            "Entity": "indicadores_operacionais"
-			          }
-			        },
-			        "indicadores_operacionais.rompimentos_rede": {
-			          "Target": {
-			            "Entity": "indicadores_operacionais.rompimentos_rede"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "indicadores_operacionais"
-			            },
-			            "Object": {
-			              "Role": "indicadores_operacionais.rompimentos_rede"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "indicadores_operacionaises_have_rompimentos_redes"
-			        }
-			      ]
-			    },
-			    "indicadores_operacionais_has_tempo_medio_reparo_h": {
-			      "Binding": {
-			        "ConceptualEntity": "indicadores_operacionais"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "indicadores_operacionais": {
-			          "Target": {
-			            "Entity": "indicadores_operacionais"
-			          }
-			        },
-			        "indicadores_operacionais.tempo_medio_reparo_h": {
-			          "Target": {
-			            "Entity": "indicadores_operacionais.tempo_medio_reparo_h"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "indicadores_operacionais"
-			            },
-			            "Object": {
-			              "Role": "indicadores_operacionais.tempo_medio_reparo_h"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "indicadores_operacionaises_have_tempo_medio_reparo_h"
-			        }
-			      ]
-			    },
-			    "cliente_has_id_cliente": {
-			      "Binding": {
-			        "ConceptualEntity": "clientes"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "cliente": {
-			          "Target": {
-			            "Entity": "cliente"
-			          }
-			        },
-			        "cliente.id_cliente": {
-			          "Target": {
-			            "Entity": "cliente.id_cliente"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "cliente"
-			            },
-			            "Object": {
-			              "Role": "cliente.id_cliente"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "clientes_have_id_clientes"
-			        }
-			      ]
-			    },
-			    "cliente_has_tipo_cliente": {
-			      "Binding": {
-			        "ConceptualEntity": "clientes"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "cliente": {
-			          "Target": {
-			            "Entity": "cliente"
-			          }
-			        },
-			        "cliente.tipo_cliente": {
-			          "Target": {
-			            "Entity": "cliente.tipo_cliente"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "cliente"
-			            },
-			            "Object": {
-			              "Role": "cliente.tipo_cliente"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "clientes_have_tipo_clientes"
-			        }
-			      ]
-			    },
-			    "cliente_has_tarifa_m_3": {
-			      "Binding": {
-			        "ConceptualEntity": "clientes"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "cliente": {
-			          "Target": {
-			            "Entity": "cliente"
-			          }
-			        },
-			        "cliente.tarifa_m_3": {
-			          "Target": {
-			            "Entity": "cliente.tarifa_m_3"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "cliente"
-			            },
-			            "Object": {
-			              "Role": "cliente.tarifa_m_3"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "clientes_have_tarifa_m_3"
-			        }
-			      ]
-			    },
-			    "d_calendario_has_data": {
+			    "d_calendario_data_hierarquia_de_data_has_d_calendario_data_trimestre": {
 			      "Binding": {
 			        "ConceptualEntity": "dCalendario"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "d_calendario": {
+			        "d_calendario.data.hierarquia_de_data": {
 			          "Target": {
-			            "Entity": "d_calendario"
+			            "Entity": "d_calendario.data.hierarquia_de_data"
 			          }
 			        },
+			        "d_calendario.data.trimestre": {
+			          "Target": {
+			            "Entity": "d_calendario.data.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_calendario.data.hierarquia_de_data"
+			            },
+			            "Object": {
+			              "Role": "d_calendario.data.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hierarquia_de_data_have_trimestres"
+			        }
+			      ]
+			    },
+			    "d_calendario_data_hierarquia_de_data_has_d_calendario_data_ano": {
+			      "Binding": {
+			        "ConceptualEntity": "dCalendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "d_calendario.data.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "d_calendario.data.hierarquia_de_data"
+			          }
+			        },
+			        "d_calendario.data.ano": {
+			          "Target": {
+			            "Entity": "d_calendario.data.ano"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_calendario.data.hierarquia_de_data"
+			            },
+			            "Object": {
+			              "Role": "d_calendario.data.ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "hierarquia_de_data_have_anos"
+			        }
+			      ]
+			    },
+			    "d_calendario_data_has_hierarquia_de_data": {
+			      "Binding": {
+			        "ConceptualEntity": "dCalendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
 			        "d_calendario.data": {
 			          "Target": {
 			            "Entity": "d_calendario.data"
 			          }
+			        },
+			        "d_calendario.data.hierarquia_de_data": {
+			          "Target": {
+			            "Entity": "d_calendario.data.hierarquia_de_data"
+			          }
 			        }
 			      },
 			      "Phrasings": [
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "d_calendario"
-			            },
-			            "Object": {
 			              "Role": "d_calendario.data"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "d_calendarios_have_data"
-			        }
-			      ]
-			    },
-			    "d_calendario_has_ano": {
-			      "Binding": {
-			        "ConceptualEntity": "dCalendario"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "d_calendario": {
-			          "Target": {
-			            "Entity": "d_calendario"
-			          }
-			        },
-			        "d_calendario.ano": {
-			          "Target": {
-			            "Entity": "d_calendario.ano"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "d_calendario"
 			            },
 			            "Object": {
-			              "Role": "d_calendario.ano"
+			              "Role": "d_calendario.data.hierarquia_de_data"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "d_calendarios_have_anos"
+			          "ID": "data_have_hierarquia_de_data"
 			        }
 			      ]
 			    },
-			    "d_calendario_has_dia": {
-			      "Binding": {
-			        "ConceptualEntity": "dCalendario"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "d_calendario": {
-			          "Target": {
-			            "Entity": "d_calendario"
-			          }
-			        },
-			        "d_calendario.dia": {
-			          "Target": {
-			            "Entity": "d_calendario.dia"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "d_calendario"
-			            },
-			            "Object": {
-			              "Role": "d_calendario.dia"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "d_calendarios_have_dias"
-			        }
-			      ]
-			    },
-			    "d_calendario_has_mê": {
-			      "Binding": {
-			        "ConceptualEntity": "dCalendario"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "d_calendario": {
-			          "Target": {
-			            "Entity": "d_calendario"
-			          }
-			        },
-			        "d_calendario.mê": {
-			          "Target": {
-			            "Entity": "d_calendario.mê"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "d_calendario"
-			            },
-			            "Object": {
-			              "Role": "d_calendario.mê"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "d_calendarios_have_mê"
-			        }
-			      ]
-			    },
-			    "d_calendario_has_mês_num": {
-			      "Binding": {
-			        "ConceptualEntity": "dCalendario"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "d_calendario": {
-			          "Target": {
-			            "Entity": "d_calendario"
-			          }
-			        },
-			        "d_calendario.mês_num": {
-			          "Target": {
-			            "Entity": "d_calendario.mês_num"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "d_calendario"
-			            },
-			            "Object": {
-			              "Role": "d_calendario.mês_num"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "d_calendarios_have_mês_nums"
-			        }
-			      ]
-			    },
-			    "d_calendario_has_trimestre": {
-			      "Binding": {
-			        "ConceptualEntity": "dCalendario"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "d_calendario": {
-			          "Target": {
-			            "Entity": "d_calendario"
-			          }
-			        },
-			        "d_calendario.trimestre": {
-			          "Target": {
-			            "Entity": "d_calendario.trimestre"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "d_calendario"
-			            },
-			            "Object": {
-			              "Role": "d_calendario.trimestre"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "d_calendarios_have_trimestres"
-			        }
-			      ]
-			    },
-			    "cidade_has_metrica_reclamacoes_100k": {
-			      "Binding": {
-			        "ConceptualEntity": "cidades"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "cidade": {
-			          "Target": {
-			            "Entity": "cidade"
-			          }
-			        },
-			        "metrica.reclamacoes_100k": {
-			          "Target": {
-			            "Entity": "metrica.reclamacoes_100k"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "cidade"
-			            },
-			            "Object": {
-			              "Role": "metrica.reclamacoes_100k"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "cidades_have_reclamacoes_100k"
-			        }
-			      ]
-			    },
-			    "indicadores_operacionais_has_metrica_reclamacoes_100k": {
-			      "Binding": {
-			        "ConceptualEntity": "indicadores_operacionais"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "indicadores_operacionais": {
-			          "Target": {
-			            "Entity": "indicadores_operacionais"
-			          }
-			        },
-			        "metrica.reclamacoes_100k": {
-			          "Target": {
-			            "Entity": "metrica.reclamacoes_100k"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "indicadores_operacionais"
-			            },
-			            "Object": {
-			              "Role": "metrica.reclamacoes_100k"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "indicadores_operacionaises_have_reclamacoes_100k"
-			        }
-			      ]
-			    },
-			    "consumo_agua_has_metrica_perda_de_água": {
-			      "Binding": {
-			        "ConceptualEntity": "consumo_agua"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "consumo_agua": {
-			          "Target": {
-			            "Entity": "consumo_agua"
-			          }
-			        },
-			        "metrica.perda_de_água": {
-			          "Target": {
-			            "Entity": "metrica.perda_de_água"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "consumo_agua"
-			            },
-			            "Object": {
-			              "Role": "metrica.perda_de_água"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "consumo_agua_have_perda_de_água"
-			        }
-			      ]
-			    },
-			    "indicadores_operacionais_has_metrica_reclamações": {
-			      "Binding": {
-			        "ConceptualEntity": "indicadores_operacionais"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "indicadores_operacionais": {
-			          "Target": {
-			            "Entity": "indicadores_operacionais"
-			          }
-			        },
-			        "metrica.reclamações": {
-			          "Target": {
-			            "Entity": "metrica.reclamações"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "indicadores_operacionais"
-			            },
-			            "Object": {
-			              "Role": "metrica.reclamações"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "indicadores_operacionaises_have_reclamações"
-			        }
-			      ]
-			    },
-			    "indicadores_operacionais_has_metrica_rompimentos_rede": {
-			      "Binding": {
-			        "ConceptualEntity": "indicadores_operacionais"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "indicadores_operacionais": {
-			          "Target": {
-			            "Entity": "indicadores_operacionais"
-			          }
-			        },
-			        "metrica.rompimentos_rede": {
-			          "Target": {
-			            "Entity": "metrica.rompimentos_rede"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "indicadores_operacionais"
-			            },
-			            "Object": {
-			              "Role": "metrica.rompimentos_rede"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "indicadores_operacionaises_have_rompimentos_rede"
-			        }
-			      ]
-			    },
-			    "cliente_has_metrica_faturamento": {
+			    "cliente_has_cidade": {
 			      "Binding": {
 			        "ConceptualEntity": "clientes"
 			      },
@@ -2602,171 +1846,6 @@ cultureInfo pt-BR
 			        "cliente": {
 			          "Target": {
 			            "Entity": "cliente"
-			          }
-			        },
-			        "metrica.faturamento": {
-			          "Target": {
-			            "Entity": "metrica.faturamento"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "cliente"
-			            },
-			            "Object": {
-			              "Role": "metrica.faturamento"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "clientes_have_faturamento"
-			        }
-			      ]
-			    },
-			    "consumo_agua_has_metrica_faturamento": {
-			      "Binding": {
-			        "ConceptualEntity": "consumo_agua"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "consumo_agua": {
-			          "Target": {
-			            "Entity": "consumo_agua"
-			          }
-			        },
-			        "metrica.faturamento": {
-			          "Target": {
-			            "Entity": "metrica.faturamento"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "consumo_agua"
-			            },
-			            "Object": {
-			              "Role": "metrica.faturamento"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "consumo_agua_have_faturamento"
-			        }
-			      ]
-			    },
-			    "cliente_has_metrica_tarifa_média": {
-			      "Binding": {
-			        "ConceptualEntity": "clientes"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "cliente": {
-			          "Target": {
-			            "Entity": "cliente"
-			          }
-			        },
-			        "metrica.tarifa_média": {
-			          "Target": {
-			            "Entity": "metrica.tarifa_média"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "cliente"
-			            },
-			            "Object": {
-			              "Role": "metrica.tarifa_média"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "clientes_have_tarifa_média"
-			        }
-			      ]
-			    },
-			    "cliente_has_metrica_faturamento_estimado": {
-			      "Binding": {
-			        "ConceptualEntity": "clientes"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "cliente": {
-			          "Target": {
-			            "Entity": "cliente"
-			          }
-			        },
-			        "metrica.faturamento_estimado": {
-			          "Target": {
-			            "Entity": "metrica.faturamento_estimado"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "cliente"
-			            },
-			            "Object": {
-			              "Role": "metrica.faturamento_estimado"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "clientes_have_faturamento_estimado"
-			        }
-			      ]
-			    },
-			    "consumo_agua_has_metrica_faturamento_estimado": {
-			      "Binding": {
-			        "ConceptualEntity": "consumo_agua"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "consumo_agua": {
-			          "Target": {
-			            "Entity": "consumo_agua"
-			          }
-			        },
-			        "metrica.faturamento_estimado": {
-			          "Target": {
-			            "Entity": "metrica.faturamento_estimado"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "consumo_agua"
-			            },
-			            "Object": {
-			              "Role": "metrica.faturamento_estimado"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "consumo_agua_have_faturamento_estimado"
-			        }
-			      ]
-			    },
-			    "consumo_agua_has_cidade": {
-			      "Binding": {
-			        "ConceptualEntity": "consumo_agua"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "consumo_agua": {
-			          "Target": {
-			            "Entity": "consumo_agua"
 			          }
 			        },
 			        "cidade": {
@@ -2779,7 +1858,7 @@ cultureInfo pt-BR
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "consumo_agua"
+			              "Role": "cliente"
 			            },
 			            "Object": {
 			              "Role": "cidade"
@@ -2787,7 +1866,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "consumo_agua_have_cidades"
+			          "ID": "clientes_have_cidades"
 			        },
 			        {
 			          "Attribute": {
@@ -2795,111 +1874,12 @@ cultureInfo pt-BR
 			              "Role": "cidade"
 			            },
 			            "Object": {
-			              "Role": "consumo_agua"
+			              "Role": "cliente"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "cidades_have_consumo_agua"
-			        }
-			      ]
-			    },
-			    "consumo_agua_has_d_calendario": {
-			      "Binding": {
-			        "ConceptualEntity": "consumo_agua"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "consumo_agua": {
-			          "Target": {
-			            "Entity": "consumo_agua"
-			          }
-			        },
-			        "d_calendario": {
-			          "Target": {
-			            "Entity": "d_calendario"
-			          },
-			          "Nouns": [
-			            {
-			              "data": {
-			                "State": "Generated"
-			              }
-			            }
-			          ]
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "consumo_agua"
-			            },
-			            "Object": {
-			              "Role": "d_calendario"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "consumo_agua_have_d_calendarios"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "d_calendario"
-			            },
-			            "Object": {
-			              "Role": "consumo_agua"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "d_calendarios_have_consumo_agua"
-			        }
-			      ]
-			    },
-			    "indicadores_operacionais_has_cidade": {
-			      "Binding": {
-			        "ConceptualEntity": "indicadores_operacionais"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "indicadores_operacionais": {
-			          "Target": {
-			            "Entity": "indicadores_operacionais"
-			          }
-			        },
-			        "cidade": {
-			          "Target": {
-			            "Entity": "cidade"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "indicadores_operacionais"
-			            },
-			            "Object": {
-			              "Role": "cidade"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "indicadores_operacionaises_have_cidades"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "cidade"
-			            },
-			            "Object": {
-			              "Role": "indicadores_operacionais"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "cidades_have_indicadores_operacionaises"
+			          "ID": "cidades_have_clientes"
 			        }
 			      ]
 			    },
@@ -2956,15 +1936,15 @@ cultureInfo pt-BR
 			        }
 			      ]
 			    },
-			    "cliente_has_cidade": {
+			    "indicadores_operacionais_has_cidade": {
 			      "Binding": {
-			        "ConceptualEntity": "clientes"
+			        "ConceptualEntity": "indicadores_operacionais"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "cliente": {
+			        "indicadores_operacionais": {
 			          "Target": {
-			            "Entity": "cliente"
+			            "Entity": "indicadores_operacionais"
 			          }
 			        },
 			        "cidade": {
@@ -2977,7 +1957,7 @@ cultureInfo pt-BR
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "cliente"
+			              "Role": "indicadores_operacionais"
 			            },
 			            "Object": {
 			              "Role": "cidade"
@@ -2985,7 +1965,7 @@ cultureInfo pt-BR
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "clientes_have_cidades"
+			          "ID": "indicadores_operacionaises_have_cidades"
 			        },
 			        {
 			          "Attribute": {
@@ -2993,62 +1973,788 @@ cultureInfo pt-BR
 			              "Role": "cidade"
 			            },
 			            "Object": {
-			              "Role": "cliente"
+			              "Role": "indicadores_operacionais"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "cidades_have_clientes"
+			          "ID": "cidades_have_indicadores_operacionaises"
 			        }
 			      ]
 			    },
-			    "d_calendario_data_has_hierarquia_de_data": {
+			    "consumo_agua_has_d_calendario": {
+			      "Binding": {
+			        "ConceptualEntity": "consumo_agua"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "consumo_agua": {
+			          "Target": {
+			            "Entity": "consumo_agua"
+			          }
+			        },
+			        "d_calendario": {
+			          "Target": {
+			            "Entity": "d_calendario"
+			          },
+			          "Nouns": [
+			            {
+			              "data": {
+			                "State": "Generated"
+			              }
+			            }
+			          ]
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "consumo_agua"
+			            },
+			            "Object": {
+			              "Role": "d_calendario"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "consumo_agua_have_d_calendarios"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_calendario"
+			            },
+			            "Object": {
+			              "Role": "consumo_agua"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "d_calendarios_have_consumo_agua"
+			        }
+			      ]
+			    },
+			    "consumo_agua_has_cidade": {
+			      "Binding": {
+			        "ConceptualEntity": "consumo_agua"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "consumo_agua": {
+			          "Target": {
+			            "Entity": "consumo_agua"
+			          }
+			        },
+			        "cidade": {
+			          "Target": {
+			            "Entity": "cidade"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "consumo_agua"
+			            },
+			            "Object": {
+			              "Role": "cidade"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "consumo_agua_have_cidades"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "cidade"
+			            },
+			            "Object": {
+			              "Role": "consumo_agua"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "cidades_have_consumo_agua"
+			        }
+			      ]
+			    },
+			    "consumo_agua_has_metrica_total_acumulado_de_faturamento_estimado_em_data": {
+			      "Binding": {
+			        "ConceptualEntity": "consumo_agua"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "consumo_agua": {
+			          "Target": {
+			            "Entity": "consumo_agua"
+			          }
+			        },
+			        "metrica.total_acumulado_de_faturamento_estimado_em_data": {
+			          "Target": {
+			            "Entity": "metrica.total_acumulado_de_faturamento_estimado_em_data"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "consumo_agua"
+			            },
+			            "Object": {
+			              "Role": "metrica.total_acumulado_de_faturamento_estimado_em_data"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "consumo_agua_have_total_acumulado_de_faturamento_estimado_em_data"
+			        }
+			      ]
+			    },
+			    "cliente_has_metrica_total_acumulado_de_faturamento_estimado_em_data": {
+			      "Binding": {
+			        "ConceptualEntity": "clientes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "cliente": {
+			          "Target": {
+			            "Entity": "cliente"
+			          }
+			        },
+			        "metrica.total_acumulado_de_faturamento_estimado_em_data": {
+			          "Target": {
+			            "Entity": "metrica.total_acumulado_de_faturamento_estimado_em_data"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "cliente"
+			            },
+			            "Object": {
+			              "Role": "metrica.total_acumulado_de_faturamento_estimado_em_data"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "clientes_have_total_acumulado_de_faturamento_estimado_em_data"
+			        }
+			      ]
+			    },
+			    "consumo_agua_has_metrica_faturamento_acum": {
+			      "Binding": {
+			        "ConceptualEntity": "consumo_agua"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "consumo_agua": {
+			          "Target": {
+			            "Entity": "consumo_agua"
+			          }
+			        },
+			        "metrica.faturamento_acum": {
+			          "Target": {
+			            "Entity": "metrica.faturamento_acum"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "consumo_agua"
+			            },
+			            "Object": {
+			              "Role": "metrica.faturamento_acum"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "consumo_agua_have_faturamento_acum"
+			        }
+			      ]
+			    },
+			    "cliente_has_metrica_faturamento_acum": {
+			      "Binding": {
+			        "ConceptualEntity": "clientes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "cliente": {
+			          "Target": {
+			            "Entity": "cliente"
+			          }
+			        },
+			        "metrica.faturamento_acum": {
+			          "Target": {
+			            "Entity": "metrica.faturamento_acum"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "cliente"
+			            },
+			            "Object": {
+			              "Role": "metrica.faturamento_acum"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "clientes_have_faturamento_acum"
+			        }
+			      ]
+			    },
+			    "consumo_agua_has_metrica_faturamento_estimado": {
+			      "Binding": {
+			        "ConceptualEntity": "consumo_agua"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "consumo_agua": {
+			          "Target": {
+			            "Entity": "consumo_agua"
+			          }
+			        },
+			        "metrica.faturamento_estimado": {
+			          "Target": {
+			            "Entity": "metrica.faturamento_estimado"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "consumo_agua"
+			            },
+			            "Object": {
+			              "Role": "metrica.faturamento_estimado"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "consumo_agua_have_faturamento_estimado"
+			        }
+			      ]
+			    },
+			    "cliente_has_metrica_faturamento_estimado": {
+			      "Binding": {
+			        "ConceptualEntity": "clientes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "cliente": {
+			          "Target": {
+			            "Entity": "cliente"
+			          }
+			        },
+			        "metrica.faturamento_estimado": {
+			          "Target": {
+			            "Entity": "metrica.faturamento_estimado"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "cliente"
+			            },
+			            "Object": {
+			              "Role": "metrica.faturamento_estimado"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "clientes_have_faturamento_estimado"
+			        }
+			      ]
+			    },
+			    "cliente_has_metrica_tarifa_média": {
+			      "Binding": {
+			        "ConceptualEntity": "clientes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "cliente": {
+			          "Target": {
+			            "Entity": "cliente"
+			          }
+			        },
+			        "metrica.tarifa_média": {
+			          "Target": {
+			            "Entity": "metrica.tarifa_média"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "cliente"
+			            },
+			            "Object": {
+			              "Role": "metrica.tarifa_média"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "clientes_have_tarifa_média"
+			        }
+			      ]
+			    },
+			    "consumo_agua_has_metrica_faturamento": {
+			      "Binding": {
+			        "ConceptualEntity": "consumo_agua"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "consumo_agua": {
+			          "Target": {
+			            "Entity": "consumo_agua"
+			          }
+			        },
+			        "metrica.faturamento": {
+			          "Target": {
+			            "Entity": "metrica.faturamento"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "consumo_agua"
+			            },
+			            "Object": {
+			              "Role": "metrica.faturamento"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "consumo_agua_have_faturamento"
+			        }
+			      ]
+			    },
+			    "cliente_has_metrica_faturamento": {
+			      "Binding": {
+			        "ConceptualEntity": "clientes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "cliente": {
+			          "Target": {
+			            "Entity": "cliente"
+			          }
+			        },
+			        "metrica.faturamento": {
+			          "Target": {
+			            "Entity": "metrica.faturamento"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "cliente"
+			            },
+			            "Object": {
+			              "Role": "metrica.faturamento"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "clientes_have_faturamento"
+			        }
+			      ]
+			    },
+			    "indicadores_operacionais_has_metrica_rompimentos_rede": {
+			      "Binding": {
+			        "ConceptualEntity": "indicadores_operacionais"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "indicadores_operacionais": {
+			          "Target": {
+			            "Entity": "indicadores_operacionais"
+			          }
+			        },
+			        "metrica.rompimentos_rede": {
+			          "Target": {
+			            "Entity": "metrica.rompimentos_rede"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "indicadores_operacionais"
+			            },
+			            "Object": {
+			              "Role": "metrica.rompimentos_rede"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "indicadores_operacionaises_have_rompimentos_rede"
+			        }
+			      ]
+			    },
+			    "indicadores_operacionais_has_metrica_reclamações": {
+			      "Binding": {
+			        "ConceptualEntity": "indicadores_operacionais"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "indicadores_operacionais": {
+			          "Target": {
+			            "Entity": "indicadores_operacionais"
+			          }
+			        },
+			        "metrica.reclamações": {
+			          "Target": {
+			            "Entity": "metrica.reclamações"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "indicadores_operacionais"
+			            },
+			            "Object": {
+			              "Role": "metrica.reclamações"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "indicadores_operacionaises_have_reclamações"
+			        }
+			      ]
+			    },
+			    "consumo_agua_has_metrica_perda_de_água": {
+			      "Binding": {
+			        "ConceptualEntity": "consumo_agua"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "consumo_agua": {
+			          "Target": {
+			            "Entity": "consumo_agua"
+			          }
+			        },
+			        "metrica.perda_de_água": {
+			          "Target": {
+			            "Entity": "metrica.perda_de_água"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "consumo_agua"
+			            },
+			            "Object": {
+			              "Role": "metrica.perda_de_água"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "consumo_agua_have_perda_de_água"
+			        }
+			      ]
+			    },
+			    "indicadores_operacionais_has_metrica_reclamacoes_100k": {
+			      "Binding": {
+			        "ConceptualEntity": "indicadores_operacionais"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "indicadores_operacionais": {
+			          "Target": {
+			            "Entity": "indicadores_operacionais"
+			          }
+			        },
+			        "metrica.reclamacoes_100k": {
+			          "Target": {
+			            "Entity": "metrica.reclamacoes_100k"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "indicadores_operacionais"
+			            },
+			            "Object": {
+			              "Role": "metrica.reclamacoes_100k"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "indicadores_operacionaises_have_reclamacoes_100k"
+			        }
+			      ]
+			    },
+			    "cidade_has_metrica_reclamacoes_100k": {
+			      "Binding": {
+			        "ConceptualEntity": "cidades"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "cidade": {
+			          "Target": {
+			            "Entity": "cidade"
+			          }
+			        },
+			        "metrica.reclamacoes_100k": {
+			          "Target": {
+			            "Entity": "metrica.reclamacoes_100k"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "cidade"
+			            },
+			            "Object": {
+			              "Role": "metrica.reclamacoes_100k"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "cidades_have_reclamacoes_100k"
+			        }
+			      ]
+			    },
+			    "d_calendario_has_trimestre": {
 			      "Binding": {
 			        "ConceptualEntity": "dCalendario"
 			      },
 			      "State": "Generated",
 			      "Roles": {
+			        "d_calendario": {
+			          "Target": {
+			            "Entity": "d_calendario"
+			          }
+			        },
+			        "d_calendario.trimestre": {
+			          "Target": {
+			            "Entity": "d_calendario.trimestre"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_calendario"
+			            },
+			            "Object": {
+			              "Role": "d_calendario.trimestre"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "d_calendarios_have_trimestres"
+			        }
+			      ]
+			    },
+			    "d_calendario_has_mês_num": {
+			      "Binding": {
+			        "ConceptualEntity": "dCalendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "d_calendario": {
+			          "Target": {
+			            "Entity": "d_calendario"
+			          }
+			        },
+			        "d_calendario.mês_num": {
+			          "Target": {
+			            "Entity": "d_calendario.mês_num"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_calendario"
+			            },
+			            "Object": {
+			              "Role": "d_calendario.mês_num"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "d_calendarios_have_mês_nums"
+			        }
+			      ]
+			    },
+			    "d_calendario_has_mê": {
+			      "Binding": {
+			        "ConceptualEntity": "dCalendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "d_calendario": {
+			          "Target": {
+			            "Entity": "d_calendario"
+			          }
+			        },
+			        "d_calendario.mê": {
+			          "Target": {
+			            "Entity": "d_calendario.mê"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_calendario"
+			            },
+			            "Object": {
+			              "Role": "d_calendario.mê"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "d_calendarios_have_mê"
+			        }
+			      ]
+			    },
+			    "d_calendario_has_dia": {
+			      "Binding": {
+			        "ConceptualEntity": "dCalendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "d_calendario": {
+			          "Target": {
+			            "Entity": "d_calendario"
+			          }
+			        },
+			        "d_calendario.dia": {
+			          "Target": {
+			            "Entity": "d_calendario.dia"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_calendario"
+			            },
+			            "Object": {
+			              "Role": "d_calendario.dia"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "d_calendarios_have_dias"
+			        }
+			      ]
+			    },
+			    "d_calendario_has_ano": {
+			      "Binding": {
+			        "ConceptualEntity": "dCalendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "d_calendario": {
+			          "Target": {
+			            "Entity": "d_calendario"
+			          }
+			        },
+			        "d_calendario.ano": {
+			          "Target": {
+			            "Entity": "d_calendario.ano"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "d_calendario"
+			            },
+			            "Object": {
+			              "Role": "d_calendario.ano"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "d_calendarios_have_anos"
+			        }
+			      ]
+			    },
+			    "d_calendario_has_data": {
+			      "Binding": {
+			        "ConceptualEntity": "dCalendario"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "d_calendario": {
+			          "Target": {
+			            "Entity": "d_calendario"
+			          }
+			        },
 			        "d_calendario.data": {
 			          "Target": {
 			            "Entity": "d_calendario.data"
 			          }
-			        },
-			        "d_calendario.data.hierarquia_de_data": {
-			          "Target": {
-			            "Entity": "d_calendario.data.hierarquia_de_data"
-			          }
 			        }
 			      },
 			      "Phrasings": [
 			        {
 			          "Attribute": {
 			            "Subject": {
+			              "Role": "d_calendario"
+			            },
+			            "Object": {
 			              "Role": "d_calendario.data"
-			            },
-			            "Object": {
-			              "Role": "d_calendario.data.hierarquia_de_data"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "data_have_hierarquia_de_data"
+			          "ID": "d_calendarios_have_data"
 			        }
 			      ]
 			    },
-			    "d_calendario_data_hierarquia_de_data_has_d_calendario_data_ano": {
+			    "cliente_has_tarifa_m_3": {
 			      "Binding": {
-			        "ConceptualEntity": "dCalendario"
+			        "ConceptualEntity": "clientes"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "d_calendario.data.hierarquia_de_data": {
+			        "cliente": {
 			          "Target": {
-			            "Entity": "d_calendario.data.hierarquia_de_data"
+			            "Entity": "cliente"
 			          }
 			        },
-			        "d_calendario.data.ano": {
+			        "cliente.tarifa_m_3": {
 			          "Target": {
-			            "Entity": "d_calendario.data.ano"
+			            "Entity": "cliente.tarifa_m_3"
 			          }
 			        }
 			      },
@@ -3056,32 +2762,32 @@ cultureInfo pt-BR
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "d_calendario.data.hierarquia_de_data"
+			              "Role": "cliente"
 			            },
 			            "Object": {
-			              "Role": "d_calendario.data.ano"
+			              "Role": "cliente.tarifa_m_3"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_anos"
+			          "ID": "clientes_have_tarifa_m_3"
 			        }
 			      ]
 			    },
-			    "d_calendario_data_hierarquia_de_data_has_d_calendario_data_trimestre": {
+			    "cliente_has_tipo_cliente": {
 			      "Binding": {
-			        "ConceptualEntity": "dCalendario"
+			        "ConceptualEntity": "clientes"
 			      },
 			      "State": "Generated",
 			      "Roles": {
-			        "d_calendario.data.hierarquia_de_data": {
+			        "cliente": {
 			          "Target": {
-			            "Entity": "d_calendario.data.hierarquia_de_data"
+			            "Entity": "cliente"
 			          }
 			        },
-			        "d_calendario.data.trimestre": {
+			        "cliente.tipo_cliente": {
 			          "Target": {
-			            "Entity": "d_calendario.data.trimestre"
+			            "Entity": "cliente.tipo_cliente"
 			          }
 			        }
 			      },
@@ -3089,15 +2795,457 @@ cultureInfo pt-BR
 			        {
 			          "Attribute": {
 			            "Subject": {
-			              "Role": "d_calendario.data.hierarquia_de_data"
+			              "Role": "cliente"
 			            },
 			            "Object": {
-			              "Role": "d_calendario.data.trimestre"
+			              "Role": "cliente.tipo_cliente"
 			            }
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "hierarquia_de_data_have_trimestres"
+			          "ID": "clientes_have_tipo_clientes"
+			        }
+			      ]
+			    },
+			    "cliente_has_id_cliente": {
+			      "Binding": {
+			        "ConceptualEntity": "clientes"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "cliente": {
+			          "Target": {
+			            "Entity": "cliente"
+			          }
+			        },
+			        "cliente.id_cliente": {
+			          "Target": {
+			            "Entity": "cliente.id_cliente"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "cliente"
+			            },
+			            "Object": {
+			              "Role": "cliente.id_cliente"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "clientes_have_id_clientes"
+			        }
+			      ]
+			    },
+			    "indicadores_operacionais_has_tempo_medio_reparo_h": {
+			      "Binding": {
+			        "ConceptualEntity": "indicadores_operacionais"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "indicadores_operacionais": {
+			          "Target": {
+			            "Entity": "indicadores_operacionais"
+			          }
+			        },
+			        "indicadores_operacionais.tempo_medio_reparo_h": {
+			          "Target": {
+			            "Entity": "indicadores_operacionais.tempo_medio_reparo_h"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "indicadores_operacionais"
+			            },
+			            "Object": {
+			              "Role": "indicadores_operacionais.tempo_medio_reparo_h"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "indicadores_operacionaises_have_tempo_medio_reparo_h"
+			        }
+			      ]
+			    },
+			    "indicadores_operacionais_has_rompimentos_rede": {
+			      "Binding": {
+			        "ConceptualEntity": "indicadores_operacionais"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "indicadores_operacionais": {
+			          "Target": {
+			            "Entity": "indicadores_operacionais"
+			          }
+			        },
+			        "indicadores_operacionais.rompimentos_rede": {
+			          "Target": {
+			            "Entity": "indicadores_operacionais.rompimentos_rede"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "indicadores_operacionais"
+			            },
+			            "Object": {
+			              "Role": "indicadores_operacionais.rompimentos_rede"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "indicadores_operacionaises_have_rompimentos_redes"
+			        }
+			      ]
+			    },
+			    "indicadores_operacionais_has_reclamacoe": {
+			      "Binding": {
+			        "ConceptualEntity": "indicadores_operacionais"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "indicadores_operacionais": {
+			          "Target": {
+			            "Entity": "indicadores_operacionais"
+			          }
+			        },
+			        "indicadores_operacionais.reclamacoe": {
+			          "Target": {
+			            "Entity": "indicadores_operacionais.reclamacoe"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "indicadores_operacionais"
+			            },
+			            "Object": {
+			              "Role": "indicadores_operacionais.reclamacoe"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "indicadores_operacionaises_have_reclamacoes"
+			        }
+			      ]
+			    },
+			    "indicadores_operacionais_has_data": {
+			      "Binding": {
+			        "ConceptualEntity": "indicadores_operacionais"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "indicadores_operacionais": {
+			          "Target": {
+			            "Entity": "indicadores_operacionais"
+			          }
+			        },
+			        "indicadores_operacionais.data": {
+			          "Target": {
+			            "Entity": "indicadores_operacionais.data"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "indicadores_operacionais"
+			            },
+			            "Object": {
+			              "Role": "indicadores_operacionais.data"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "indicadores_operacionaises_have_data"
+			        }
+			      ]
+			    },
+			    "consumo_agua_has_volume_faturado_m_3": {
+			      "Binding": {
+			        "ConceptualEntity": "consumo_agua"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "consumo_agua": {
+			          "Target": {
+			            "Entity": "consumo_agua"
+			          }
+			        },
+			        "consumo_agua.volume_faturado_m_3": {
+			          "Target": {
+			            "Entity": "consumo_agua.volume_faturado_m_3"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "consumo_agua"
+			            },
+			            "Object": {
+			              "Role": "consumo_agua.volume_faturado_m_3"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "consumo_agua_have_volume_faturado_m_3"
+			        }
+			      ]
+			    },
+			    "consumo_agua_has_volume_distribuido_m_3": {
+			      "Binding": {
+			        "ConceptualEntity": "consumo_agua"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "consumo_agua": {
+			          "Target": {
+			            "Entity": "consumo_agua"
+			          }
+			        },
+			        "consumo_agua.volume_distribuido_m_3": {
+			          "Target": {
+			            "Entity": "consumo_agua.volume_distribuido_m_3"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "consumo_agua"
+			            },
+			            "Object": {
+			              "Role": "consumo_agua.volume_distribuido_m_3"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "consumo_agua_have_volume_distribuido_m_3"
+			        }
+			      ]
+			    },
+			    "consumo_agua_has_data": {
+			      "Binding": {
+			        "ConceptualEntity": "consumo_agua"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "consumo_agua": {
+			          "Target": {
+			            "Entity": "consumo_agua"
+			          }
+			        },
+			        "consumo_agua.data": {
+			          "Target": {
+			            "Entity": "consumo_agua.data"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "consumo_agua"
+			            },
+			            "Object": {
+			              "Role": "consumo_agua.data"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "consumo_agua_have_data"
+			        }
+			      ]
+			    },
+			    "consumo_agua_has_id_consumo": {
+			      "Binding": {
+			        "ConceptualEntity": "consumo_agua"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "consumo_agua": {
+			          "Target": {
+			            "Entity": "consumo_agua"
+			          }
+			        },
+			        "consumo_agua.id_consumo": {
+			          "Target": {
+			            "Entity": "consumo_agua.id_consumo"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "consumo_agua"
+			            },
+			            "Object": {
+			              "Role": "consumo_agua.id_consumo"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "consumo_agua_have_id_consumos"
+			        }
+			      ]
+			    },
+			    "cidade_has_populacao": {
+			      "Binding": {
+			        "ConceptualEntity": "cidades"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "cidade": {
+			          "Target": {
+			            "Entity": "cidade"
+			          }
+			        },
+			        "cidade.populacao": {
+			          "Target": {
+			            "Entity": "cidade.populacao"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "cidade"
+			            },
+			            "Object": {
+			              "Role": "cidade.populacao"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "cidades_have_populacaos"
+			        }
+			      ]
+			    },
+			    "cidade_has_estado": {
+			      "Binding": {
+			        "ConceptualEntity": "cidades"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "cidade": {
+			          "Target": {
+			            "Entity": "cidade"
+			          }
+			        },
+			        "cidade.estado": {
+			          "Target": {
+			            "Entity": "cidade.estado"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "cidade"
+			            },
+			            "Object": {
+			              "Role": "cidade.estado"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "cidades_have_estado"
+			        }
+			      ]
+			    },
+			    "cidade_has_cidade": {
+			      "Binding": {
+			        "ConceptualEntity": "cidades"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "cidade": {
+			          "Target": {
+			            "Entity": "cidade"
+			          }
+			        },
+			        "cidade.cidade": {
+			          "Target": {
+			            "Entity": "cidade.cidade"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "cidade"
+			            },
+			            "Object": {
+			              "Role": "cidade.cidade"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "cidades_have_cidades"
+			        },
+			        {
+			          "Name": {
+			            "Subject": {
+			              "Role": "cidade"
+			            },
+			            "Name": {
+			              "Role": "cidade.cidade"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "cidades_are_names_IDs_of_cidades"
+			        }
+			      ]
+			    },
+			    "cidade_has_id_cidade": {
+			      "Binding": {
+			        "ConceptualEntity": "cidades"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "cidade": {
+			          "Target": {
+			            "Entity": "cidade"
+			          }
+			        },
+			        "cidade.id_cidade": {
+			          "Target": {
+			            "Entity": "cidade.id_cidade"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "cidade"
+			            },
+			            "Object": {
+			              "Role": "cidade.id_cidade"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "cidades_have_id_cidades"
 			        }
 			      ]
 			    },

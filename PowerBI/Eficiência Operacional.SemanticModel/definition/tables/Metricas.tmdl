@@ -59,6 +59,55 @@ table Metricas
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	measure 'Faturamento acum' = ```
+			
+			
+			CALCULATE(
+			    [Faturamento Estimado],
+			    FILTER(
+			        ALLSELECTED('dCalendario'),
+			        'dCalendario'[Data] <= MAX('dCalendario'[Data])
+			    )
+			)
+			
+			```
+		lineageTag: 6a966bdb-6d96-48c0-b090-aac9aa8ead91
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Faturamento Estimado MoM%' =
+			
+			IF(
+				ISFILTERED('dCalendario'[Data]),
+				ERROR("ERRO"),
+				VAR __PREV_MONTH =
+					CALCULATE(
+						[Faturamento Estimado],
+						DATEADD('dCalendario'[Data], -1, MONTH)
+					)
+				RETURN
+					DIVIDE([Faturamento Estimado] - __PREV_MONTH, __PREV_MONTH)
+			)
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: f3b796d2-68fb-4912-925c-c6906d1a5405
+
+		extendedProperty MeasureTemplate =
+				{
+				  "version": 0,
+				  "daxTemplateName": "MonthOverMonth"
+				}
+
+	measure _acum =
+			
+			CALCULATE(
+			    [Faturamento Estimado],
+			    ALL(dCalendario),
+			    dCalendario[Data]<=MAX(dCalendario[Data])
+			)
+		lineageTag: bc6d998d-f53f-4b40-a7e9-f0b0d6f5b96b
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	column linha
 		isHidden
 		formatString: 0

@@ -4,10 +4,10 @@
   "position": {
     "x": 8.6050420168067223,
     "y": 294.93781512605051,
-    "z": 11,
+    "z": 8000,
     "height": 72.0672268907563,
     "width": 166.72268907563026,
-    "tabOrder": 9
+    "tabOrder": 7000
   },
   "visual": {
     "visualType": "slicer",
@@ -44,6 +44,53 @@
                 "Literal": {
                   "Value": "'Dropdown'"
                 }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {
+            "filter": {
+              "filter": {
+                "Version": 2,
+                "From": [
+                  {
+                    "Name": "c",
+                    "Entity": "clientes",
+                    "Type": 0
+                  }
+                ],
+                "Where": [
+                  {
+                    "Condition": {
+                      "In": {
+                        "Expressions": [
+                          {
+                            "Column": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Source": "c"
+                                }
+                              },
+                              "Property": "tipo_cliente"
+                            }
+                          }
+                        ],
+                        "Values": [
+                          [
+                            {
+                              "Literal": {
+                                "Value": "'Publico'"
+                              }
+                            }
+                          ]
+                        ]
+                      }
+                    }
+                  }
+                ]
               }
             }
           }
